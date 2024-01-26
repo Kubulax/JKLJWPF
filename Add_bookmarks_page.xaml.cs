@@ -26,7 +26,9 @@ namespace JKLJ
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Bookmark added = new Bookmark();
+            added.PageNumber = Page_add.Text;
+            added.Descripton = Description_add.Text;
             this.Close();
         }
     }

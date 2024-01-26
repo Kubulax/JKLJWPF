@@ -19,7 +19,7 @@ namespace JKLJ
     /// </summary>
     public partial class Bookmarks_page : Window
     {
-        public Bookmarks_page()
+        public Bookmarks_page(Book oldbook)
         {
             InitializeComponent();
             //Listview_bookmark.ItemsSource =

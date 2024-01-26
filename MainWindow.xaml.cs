@@ -31,7 +31,8 @@ namespace JKLJ
 
         private void Button_Bookmark(object sender, RoutedEventArgs e)
         {
-            new Bookmarks_page().ShowDialog();
+            //Book bookmarkbook = (sender as Button) as Book;
+            new Bookmarks_page(bookmarkbook).ShowDialog();
             //List_view.ItemsSource =
         }
 
