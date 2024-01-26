@@ -38,5 +38,7 @@ namespace JKLJ
             new Add_book_page().ShowDialog();
             //List_view.ItemsSource =
         }
+
+        
     }
 }

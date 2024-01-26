@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JKLJ"
         mc:Ignorable="d"
-        Title="Add_bookmarks_page" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Add_bookmarks_page" Height="300" Width="400">
+    <StackPanel Margin="10">
+        <Label Content="Strona"/>
+        <TextBox x:Name="Page_add"/>
+        <Label Content="Opis"/>
+        <TextBox x:Name="Description"/>
+        <Button Content="Dodaj" Click="Button_Click"/>
+    </StackPanel>
 </Window>

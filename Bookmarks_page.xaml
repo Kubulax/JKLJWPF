@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:JKLJ"
         mc:Ignorable="d"
         Title="Bookmarks_page" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
+        <Button Content="Dodaj Bookmark" Click="Button_Click"/>
         
-    </Grid>
+        <ListView x:Name="Listview_bookmark" MouseDoubleClick="Listview_bookmark_MouseDoubleClick">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <StackPanel>
+                            <Label Content="{Binding PageNumber}"/>
+                        </StackPanel>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackPanel>
 </Window>
