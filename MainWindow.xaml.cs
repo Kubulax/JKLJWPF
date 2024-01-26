@@ -20,26 +20,30 @@ namespace JKLJ
         public MainWindow()
         {
             InitializeComponent();
-            //List_view.ItemsSource =
+            List_view.ItemsSource = DataBase.Books;
         }
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-            //Book del = (sender as Button) as Book;
-            //List_view.ItemsSource =
+            Book selectedbook = (sender as Button).CommandParameter as Book;
+            DataBase.RemoveBook(selectedbook);
+            List_view.ItemsSource = DataBase.Books;
         }
 
         private void Button_Bookmark(object sender, RoutedEventArgs e)
         {
-            //Book bookmarkbook = (sender as Button) as Book;
-            new Bookmarks_page(bookmarkbook).ShowDialog();
-            //List_view.ItemsSource =
+            Book selectedbook = (sender as Button).CommandParameter as Book;
+
+            Bookmarks_page bookmarks = new Bookmarks_page(selectedbook);
+            bookmarks.DataContext = selectedbook;
+           bookmarks.ShowDialog();
+
         }
 
         private void Button_AddBook(object sender, RoutedEventArgs e)
         {
             new Add_book_page().ShowDialog();
-            //List_view.ItemsSource =
+            List_view.ItemsSource = DataBase.Books;
         }
 
         

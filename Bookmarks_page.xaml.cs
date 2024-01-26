@@ -22,19 +22,21 @@ namespace JKLJ
         public Bookmarks_page(Book oldbook)
         {
             InitializeComponent();
-            //Listview_bookmark.ItemsSource =
+            Listview_bookmark.ItemsSource = oldbook.Bookmarks;
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            new Add_bookmarks_page().ShowDialog();
-            //Listview_bookmark.ItemsSource =
+            Bookmark added = new Bookmark(int.Parse(Page_add.Text), Description.Text);
+            (DataContext as Book).AddBookmark(added);
+            Listview_bookmark.ItemsSource = (DataContext as Book).Bookmarks;
         }
 
         private void Listview_bookmark_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            //string m = (sender as Label) as Bookmark;
-            string message = "";
+            Bookmark m = Listview_bookmark.SelectedItem as Bookmark;
+            string message = "Opis: " + m.Description;
             MessageBox.Show(message);
         }
     }

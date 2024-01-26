@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="Bookmarks_page" Height="450" Width="800">
     <StackPanel>
-        <Button Content="Dodaj Bookmark" Click="Button_Click"/>
-        
+        <StackPanel Margin="10">
+            <Label Content="Strona"/>
+            <TextBox x:Name="Page_add"/>
+            <Label Content="Opis"/>
+            <TextBox x:Name="Description"/>
+            <Button Content="Dodaj" Click="Button_Click"/>
+        </StackPanel>
+
         <ListView x:Name="Listview_bookmark" MouseDoubleClick="Listview_bookmark_MouseDoubleClick">
             <ListView.ItemTemplate>
                 <DataTemplate>

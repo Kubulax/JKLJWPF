@@ -12,7 +12,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
                             <Label Content="Tytul:"/>
                             <Label Content="{Binding Title}"/>
                         </StackPanel>
@@ -24,8 +25,9 @@
                             <Label Content="Autor:"/>
                             <Label Content="{Binding Author}"/>
                         </StackPanel>
-                        <Button Content="Usun" Click="Button_Delete"/>
-                        <Button Content="Bookmarks" Click="Button_Bookmark"/>
+                        <Button Content="Usun" Click="Button_Delete" CommandParameter="{Binding}"/>
+                        <Button Content="Bookmarks" Click="Button_Bookmark" CommandParameter="{Binding}"/>
+                        </StackPanel>
                     </WrapPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

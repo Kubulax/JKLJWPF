@@ -26,6 +26,8 @@ namespace JKLJ
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Book newbook = new Book(Title_add.Text,Author_add.Text,Description_add.Text, Date_add.DisplayDate);
+            DataBase.AddBook(newbook);
             this.Close();
         }
     }
