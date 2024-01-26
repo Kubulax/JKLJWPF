@@ -1,0 +1,21 @@
+﻿<Window x:Class="JKLJ.Add_book_page"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JKLJ"
+        mc:Ignorable="d"
+        Title="Add_book_page" Height="300" Width="800">
+    <StackPanel>
+        <Label Content="Tytul:"></Label>
+        <TextBox x:Name="Title_add"/>
+        <Label Content="Opis:"></Label>
+        <TextBox x:Name="Description_add"/>
+        <Label Content="Autor:"></Label>
+        <TextBox x:Name="Author_add"/>
+        <Label Content="Czas Wydania:"></Label>
+        <DatePicker x:Name="Date_add"/>
+
+        <Button Content="Dodaj" Click="Button_Click"/>
+    </StackPanel>
+</Window>

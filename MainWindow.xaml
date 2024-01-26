@@ -6,7 +6,31 @@
         xmlns:local="clr-namespace:JKLJ"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Button Content="Dodaj Ksiazke" Click="Button_AddBook"/>
+        <ListView x:Name="List_view">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                            <Label Content="Tytul:"/>
+                            <Label Content="{Binding Title}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Opis:"/>
+                            <Label Content="{Binding Description}"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Autor:"/>
+                            <Label Content="{Binding Author}"/>
+                        </StackPanel>
+                        <Button Content="Usun" Click="Button_Delete" CommandParameter="{Binding}"/>
+                        <Button Content="Bookmarks" Click="Button_Bookmark" CommandParameter="{Binding}"/>
+                        </StackPanel>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 </Window>

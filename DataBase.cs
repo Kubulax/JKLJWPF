@@ -27,11 +27,13 @@ namespace JKLJ
         public static void AddBook(Book book)
         {
             Books.Add(book);
+            SaveDataBaseToJsonFile();
         }
 
         public static void RemoveBook(Book book)
         {
             Books.Remove(book);
+            SaveDataBaseToJsonFile();
         }
 
         public static void SaveDataBaseToJsonFile()

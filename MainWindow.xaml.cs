@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +20,32 @@ namespace JKLJ
         public MainWindow()
         {
             InitializeComponent();
+            List_view.ItemsSource = DataBase.Books;
         }
+
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+            Book selectedbook = (sender as Button).CommandParameter as Book;
+            DataBase.RemoveBook(selectedbook);
+            List_view.ItemsSource = DataBase.Books;
+        }
+
+        private void Button_Bookmark(object sender, RoutedEventArgs e)
+        {
+            Book selectedbook = (sender as Button).CommandParameter as Book;
+
+            Bookmarks_page bookmarks = new Bookmarks_page(selectedbook);
+            bookmarks.DataContext = selectedbook;
+           bookmarks.ShowDialog();
+
+        }
+
+        private void Button_AddBook(object sender, RoutedEventArgs e)
+        {
+            new Add_book_page().ShowDialog();
+            List_view.ItemsSource = DataBase.Books;
+        }
+
+        
     }
 }
