@@ -20,5 +20,15 @@ namespace JKLJ
         {
             InitializeComponent();
         }
+
+        private void Button_Delete(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Bookmark(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
