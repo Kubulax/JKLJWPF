@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <ListView>
+        <Button Content="Dodaj Ksiazke" Click="Button_AddBook"/>
+        <ListView x:Name="List_view">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
