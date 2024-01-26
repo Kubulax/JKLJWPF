@@ -25,12 +25,14 @@ namespace JKLJ
 
         private void Button_Delete(object sender, RoutedEventArgs e)
         {
-
+            //Book del = (sender as Button) as Book;
+            //List_view.ItemsSource =
         }
 
         private void Button_Bookmark(object sender, RoutedEventArgs e)
         {
-
+            new Bookmarks_page().ShowDialog();
+            //List_view.ItemsSource =
         }
 
         private void Button_AddBook(object sender, RoutedEventArgs e)

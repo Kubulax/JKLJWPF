@@ -22,17 +22,18 @@ namespace JKLJ
         public Bookmarks_page()
         {
             InitializeComponent();
-            //Listview_bookmark =
+            //Listview_bookmark.ItemsSource =
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new Add_bookmarks_page().ShowDialog();
-            //Listview_bookmark =
+            //Listview_bookmark.ItemsSource =
         }
 
         private void Listview_bookmark_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
+            //string m = (sender as Label) as Bookmark;
             string message = "";
             MessageBox.Show(message);
         }
